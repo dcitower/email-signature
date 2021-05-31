@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diverse Construction Signature Generator</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+
+    <style type="text/css">
+        html, body {
+            height: 100%;
+        }
+
+        body * {
+            font-family: 'Roboto', Tahoma, Geneva, sans-serif;
+            color:#6D6E70;
+        }
+
+        #content {
+            display: grid;
+            grid-template-columns: 50% 50%;
+        }
+
+        /* Form */
+        #template-form fieldset {
+            border: none;
+            display: grid;
+            grid-template-columns: 80px auto;
+        }
+
+        #template-form label {
+            font-size: 22px;
+            width: ;
+        }
+
+        #template-form input {
+            font-size: 22px;
+            padding: 3px;
+        }
+
+        /* Code */
+        .code {
+            padding-right : 30px;
+        }
+
+        .code textarea {
+            width: 100%;
+            height: 100%;
+            font-size: 11px;
+            padding: 10px;
+            font-family: monospace;
+            color: black;
+            border: 1px dotted grey;
+        }
+
+        /* Iframe */
+        #preview {
+            width: 100%;
+            border: none;
+        }
+    </style>
+
+    <script 
+        src="//cdn.rawgit.com/plugnburn/f9d3acf33bee8f3f7e2d/raw/50d2148811f8da61d70cdceec83ecbde5e484b83/dabi.min.js"></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        let template = null;
+
+        $(function(){
+            $.get('template.html', function(res) {
+                template = res;
+            })
+        })
+
+        function fillTemplate()
+        {
+            let filled = template;
+
+            filled = filled.replace('{{name}}', $('#name').val());
+            filled = filled.replace('{{title}}', $('#title').val());
+            filled = filled.replace('{{phone}}', $('#phone').val());
+            filled = filled.replace('{{phone_link}}', onlyNumbers($('#phone').val()));
+            filled = filled.replace('{{email}}', $('#email').val());
+            filled = filled.replace('{{mobile}}', $('#mobile').val());
+            filled = filled.replace('{{mobile_link}}', onlyNumbers($('#mobile').val()));
+
+            return filled;
+        }
+
+        function onlyNumbers(val)
+        {
+            return val.replace(/[^0-9]/g, '');
+        }
+
+        function renderTemplate() 
+        {
+            const filled = fillTemplate()
+
+            var doc = $('#preview')[0].contentWindow.document;
+            doc.open();
+            doc.write(filled);
+            doc.close();
+
+            $('#code-textarea').val(filled)
+        }
+
+        setInterval(function() {
+            renderTemplate();
+        }, 500)
+    </script>
+</head>
+<body>
+    <iframe id="preview" src="about:blank"></iframe>
+
+    <div id="container">
+        <div id="content">
+            <div class="form">
+                <form id="template-form">
+                    <!-- Name -->
+                    <fieldset>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" value="John Smith" />
+                    </fieldset>
+
+                    <!-- Title -->
+                    <fieldset>
+                        <label for="title">Title:</label>
+                        <input type="text" id="title" value="VIP of Happiness" />
+                    </fieldset>
+
+                    <!-- Phone -->
+                    <fieldset>
+                        <label for="tiastle">Phone:</label>
+                        <input type="text" id="phone" value="972.123.4567" />
+                    </fieldset>
+
+                    <!-- Email -->
+                    <fieldset>
+                        <label for="title">Email:</label>
+                        <input type="text" id="email" value="john@dcitower.com" />
+                    </fieldset>
+
+                    <!-- Mobile -->
+                    <fieldset>
+                        <label for="title">Mobile:</label>
+                        <input type="text" id="mobile" value="469.123.4567" />
+                    </fieldset>
+                </form>
+            </div>
+
+            <div class="code">
+                <textarea id="code-textarea"></textarea>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
