@@ -80,10 +80,14 @@
         {
             let filled = template;
 
+            const isInternal = $('#phone').val() == '';
+            const phone = isInternal ? '972.735.0701' : $('#phone').val();
+
             filled = filled.replace('{{name}}', $('#name').val());
             filled = filled.replace('{{title}}', $('#title').val());
-            filled = filled.replace('{{phone}}', $('#phone').val());
-            filled = filled.replace('{{phone_link}}', onlyNumbers($('#phone').val()));
+            filled = filled.replace('{{T}}', isInternal ? 'F' : 'T');
+            filled = filled.replace('{{phone}}', phone);
+            filled = filled.replace('{{phone_link}}', onlyNumbers(phone));
             filled = filled.replace('{{email}}', $('#email').val());
             filled = filled.replace('{{email_link}}', $('#email').val());
             filled = filled.replace('{{mobile}}', $('#mobile').val());
