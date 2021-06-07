@@ -57,6 +57,44 @@
             width: 100%;
             border: none;
         }
+
+        /* Gmail */
+        #gmail {
+            font-size:  22px;
+            padding:  15px;
+        }
+
+        #gmail .gmail-logo {
+            width:  30%;
+        }
+
+        #gmail #gmail-result {
+            padding-bottom:  10px;
+        }
+
+        #gmail button {
+            font-size:  20px;
+            padding: 5px 15px;
+            cursor:  pointer;
+        }
+
+        /* Outlook */
+        #outlook {
+            font-size:  22px;
+            padding:  15px;
+        }
+
+        #outlook button {
+            font-size:  20px;
+            padding: 5px 15px;
+            cursor:  pointer;
+            margin-bottom:  20px;
+        }
+
+        #outlook .outlook-logo {
+            width:  30%;
+        }
+
     </style>
 
     <script src="https://cdn.tiny.cloud/1/zm16lq3hv879w2ew56jo1hprb4nm7w1g158ha19r656phlf4/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
@@ -69,68 +107,15 @@
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
       crossorigin="anonymous"></script>
 
-    <script type="text/javascript">
-        let template = null;
-        let lastFilled = null;
+    <script type="text/javascript" src="js/gmail.js"></script>
+    <script type="text/javascript" src="js/outlook.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 
-        $(function(){
-            $.get('template.html', function(res) {
-                template = res;
-            })
-
-            setInterval(function() {
-                renderTemplate();
-            }, 500)
-
-            tinymce.init({
-              selector: '#code-tinymce'
-            });
-        })
-
-        function fillTemplate()
-        {
-            let filled = template;
-
-            const isInternal = $('#mobile').val() == '';
-            const phone2 = isInternal ? '972.735.0701' : $('#mobile').val();
-
-            filled = filled.replace('{{name}}', $('#name').val());
-            filled = filled.replace('{{title}}', $('#title').val());
-            filled = filled.replace('{{M}}', isInternal ? 'F' : 'M');
-            filled = filled.replace('{{phone}}', $('#phone').val());
-            filled = filled.replace('{{phone_link}}', onlyNumbers($('#phone').val()));
-            filled = filled.replace('{{email}}', $('#email').val());
-            filled = filled.replace('{{email_link}}', $('#email').val());
-            filled = filled.replace('{{mobile}}', phone2);
-            filled = filled.replace('{{mobile_link}}', onlyNumbers(phone2));
-
-            return filled;
-        }
-
-        function onlyNumbers(val)
-        {
-            return val.replace(/[^0-9]/g, '');
-        }
-
-        function renderTemplate() 
-        {
-            const filled = fillTemplate()
-
-            if(lastFilled == filled ) {
-                return;
-            }
-
-            var doc = $('#preview')[0].contentWindow.document;
-            doc.open();
-            doc.write(filled);
-            doc.close();
-            
-            $('#code-textarea').val(filled)
-            tinymce.get("code-tinymce").setContent(filled);
-
-            lastFilled = filled
-        }
+    <script async defer src="https://apis.google.com/js/api.js" 
+      onload="this.onload=function(){};handleClientLoad()" 
+      onreadystatechange="if (this.readyState === 'complete') this.onload()">
     </script>
+
 </head>
 <body>
     <iframe id="preview" src="about:blank"></iframe>
@@ -169,6 +154,29 @@
                         <input type="text" id="mobile" value="469.123.4567" />
                     </fieldset>
                 </form>
+
+                <hr>
+
+                <!-- GMAIL -->
+                <div id="gmail">
+                    <img class="gmail-logo" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.freeiconspng.com%2Fuploads%2Fgmail-icon-16.png&f=1&nofb=1" />
+                    <div id="gmail-result"></div>
+                    <button id="authorize-button" style="display: none;">Gmail Sign In</button>
+
+                    <button id="signout-button" style="display: none;">Sign Out</button>
+                    <button id="set-gmail-signature-button" style="display: none;">Set Gmail Signature</button>
+                </div>
+
+                <hr>
+
+                <!-- OUTLOOK -->
+                <div id="outlook">
+                    <img class="outlook-logo" src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Flogonoid.com%2Fimages%2Foutlook-logo.png&f=1&nofb=1" />
+                    <div>
+                        <button id="download-button">Download HTML File</button>
+                    </div>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/uu0hBvBSoJ8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
             </div>
 
             <div class="code">
