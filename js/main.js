@@ -13,9 +13,11 @@ $(function(){
     }, 500)
 
     // tiny mce editor
+    /*
     tinymce.init({
       selector: '#code-tinymce'
     });
+    */
 })
 
 function fillTemplate()
