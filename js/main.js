@@ -59,7 +59,7 @@ function renderTemplate()
     doc.close();
     
     $('#code-textarea').val(filled)
-    tinymce.get("code-tinymce").setContent(filled);
+    // tinymce.get("code-tinymce").setContent(filled);
 
     lastFilled = filled
 }
