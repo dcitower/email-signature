@@ -2,6 +2,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <style type="text/css">
     .roboto { font-family: 'Roboto', Tahoma, Geneva, sans-serif !important; }
+    @media (min-width:609px) {
+     .mobile-logo {
+      display:  none !important;
+     }
+    }
     @media (max-width:610px) {
      .desktop-logo {
        display: none !important;
@@ -27,6 +32,10 @@
         font-size: 12px !important;
         width: 35px !important;
      }
+
+     table tr td {
+        border-right:  none !important;
+     }
     } 
     </style>
     <!--[if gte mso 9]>
@@ -34,52 +43,55 @@
       .roboto { font-family: Tahoma, Geneva, sans-serif !important; }
     </style>
     <![endif]-->
-    <table style="width:100%;">
+    <table>
         <tbody>
             <tr>
-                <td class="desktop-logo" style="vertical-align:top; padding-left:10px; padding-right:10px; padding-bottom:15px; width:150px;"><img alt="" class="no-lazy" src="https://dcitower.github.io/email-signature/img/logo-and-badge.png" style="max-width:150px; width:100%"></td>
+                <td class="mobile-logo" style="vertical-align:top; padding-left:0px; padding-right:10px; padding-bottom:0px;" align="left"><img alt="" class="no-lazy" src="https://diverseconstruction.com/img-sig/logo-mobile-2.jpg" width="320" height="52" style="width:320px"></td>
+            </tr>
+            <tr>
+                <td class="desktop-logo" style="vertical-align:top; padding-left:10px; padding-right:10px; padding-bottom:15px; width:116px;" align="center"><img alt="" class="no-lazy" src="https://diverseconstruction.com/img-sig/logo-dark.jpg" width="116" height="116" style="max-width:116px; width:100%"></td>
                 <td>
-                    <table class="roboto" style="border-collapse:collapse; font-family:Tahoma, Geneva, sans-serif, 'Roboto'; color:#6D6E70; font-size:19px; font-weight:300">
+                    <table class="roboto" style="border-collapse:collapse; font-family:Tahoma, Geneva, sans-serif, 'Roboto'; color:#000000; font-size:19px; font-weight:300">
                         <tbody>
                             <tr>
-                                <td style="padding-bottom:2px; border-left:4px solid #6D6E70; padding-left:15px; font-size:26px;">
-                                    <span class="name" style="padding-bottom:5px; font-weight:400;">{{name}}</span> <span class="divider" style="font-size:28px">|</span> 
-                                    <span class="title" style="padding-bottom:10px;">{{title}}</span>
+                                <td style="padding-bottom:2px; border-left:4px solid #6D6E70; padding-left:15px; font-size:26px; border-right: 4px solid #6D6E70; padding-right: 15px;">
+                                    <span class="name" style="padding-bottom:5px; font-weight:400;">Dakota Biffle</span> <span class="divider" style="font-size:28px">|</span> 
+                                    <span class="title" style="padding-bottom:10px;">Tower Top Hand</span>
                                 </td>
                             </tr>
                             <tr>
-                                <td class="address" style="padding-bottom:2px; border-left:4px solid #6D6E70; padding-left:15px; font-size:22px; white-space:nowrap;">1690 TX-121 BUS, Lewisville, TX 75056-4800</td>
+                                <td class="address" style="padding-bottom:2px; border-left:4px solid #6D6E70; padding-left:15px; font-size:22px; white-space:nowrap; border-right: 4px solid #6D6E70; padding-right: 15px;">1625 Riverview Dr, Lewisville, TX 75056</td>
                             </tr>
 
                             <tr>
-                                <td style="padding-bottom:2px; border-left:4px solid #6D6E70; padding-left:15px;">
+                                <td style="padding-bottom:2px; border-left:4px solid #6D6E70; padding-left:15px; border-right: 4px solid #6D6E70; padding-right: 15px;">
                                     <table style="width:100%;">
                                         <tr class="phone-email roboto" style="font-family:Tahoma, Geneva, sans-serif, 'Roboto';">
                                             <td>
-                                                <span class="phone-heading" style="color:#6D6E70; font-weight:400; display:inline-block; width:42px; text-align:center;">T</span>
+                                                <span class="phone-heading" style="color:#000000; font-weight:400; display:inline-block; width:42px; text-align:center;">T</span>
                                             </td>
                                             <td>
-                                                <a href="tel:{{phone_link}}" style="color:#6D6E70; text-decoration:none;">{{phone}}</a>
+                                                <a href="tel:9727350500" style="color:#000000; text-decoration:none;">972.735.0500</a>
                                             </td>
                                             <td>
-                                                <span class="email-heading" style="color:#6D6E70; font-weight:400; display:inline-block; width:42px; text-align:center;">E</span> 
+                                                <span class="email-heading" style="color:#000000; font-weight:400; display:inline-block; width:42px; text-align:center;">E</span> 
                                             </td>
                                             <td>
-                                                <a href="mailto:{{email_link}}" style="color:#6D6E70;text-decoration:none;">{{email}}</a>
+                                                <a href="mailto:dakota@dcitower.com" style="color:#000000;text-decoration:none;">dakota@dcitower.com</a>
                                             </td>
                                         </tr>
                                         <tr class="cellphone-website roboto" style="font-family:Tahoma, Geneva, sans-serif, 'Roboto';">
                                             <td>
-                                                <span class="cellphone-heading" style="color:#6D6E70; font-weight:400; display:inline-block; width:42px; text-align:center;">{{M}}</span> 
+                                                <span class="cellphone-heading" style="color:#000000; font-weight:400; display:inline-block; width:42px; text-align:center;">M</span> 
                                             </td>
                                             <td>
-                                                <a href="tel:{{mobile_link}}" style="color:#6D6E70;text-decoration:none;">{{mobile}}</a> 
+                                                <a href="tel:2144251876" style="color:#000000;text-decoration:none;">214.425.1876</a> 
                                             </td>
                                             <td>
-                                                <span class="website-heading" style="color:#6D6E70; font-weight:400; display:inline-block; width:42px; text-align:center;">W</span> 
+                                                <span class="website-heading" style="color:#000000; font-weight:400; display:inline-block; width:42px; text-align:center;">W</span> 
                                             </td>
                                             <td>
-                                                <a href="https://diverseconstruction.com" style="color:#6D6E70;text-decoration:none;">diverseconstruction.com</a>
+                                                <a href="https://diverseconstruction.com" style="color:#000000;text-decoration:none;">diverseconstruction.com</a>
                                             </td>
                                         </tr>
                                     </table>
@@ -92,7 +104,12 @@
                         </tbody>
                     </table>
                 </td>
+                <td class="desktop-logo" style="vertical-align:top; padding-left:10px; padding-right:10px; padding-bottom:15px; width:116px; font-size:8px;" align="center"><img alt="" class="no-lazy" src="https://diverseconstruction.com/img-sig/qr-dakota-b.jpg" width="116" height="116" style="max-width:116px; width:100%">
+                <br>
+                <span style="color:#6D6E70;font-style: italic;">Scan QR code to add my contact</span>
+                </td>
             </tr>
+
         </tbody>
     </table>
 </div>
