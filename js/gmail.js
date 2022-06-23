@@ -32,10 +32,6 @@ let signoutButton;
 let signatureButton;
 let myEmail;
 
-window.isAuthenticated = false;
-window.identity = {};
-window.token = '';
-
 let client;
 
 $(function() {
@@ -46,7 +42,7 @@ $(function() {
     authorizeButton.click(onAuthClick);
     signoutButton.click(onSignoutClick);
     signatureButton.click(onSetSignatureClick);
-    
+
     updateSigninStatus(false);
 })
 
@@ -57,8 +53,6 @@ function handleClientLoad() {
         scope: scopes.join(' '),
         callback: (response) => {
             console.log('response', response)
-            window.at = response.access_token
-            window.gapi2 = gapi
             if( response?.access_token ) {
                 gapi.client.setApiKey(response.access_token);
                 gapi.client.load('gmail', 'v1', handleApiLoadFinished);
