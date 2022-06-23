@@ -89,7 +89,6 @@ function onAuthClick(event) {
 }
 
 function onSignoutClick(event) {
-    gapi.auth2.getAuthInstance().signOut();
     $('#gmail-result').html('')
 }
 
