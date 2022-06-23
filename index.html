@@ -99,7 +99,7 @@
 
     <script src="https://cdn.tiny.cloud/1/zm16lq3hv879w2ew56jo1hprb4nm7w1g158ha19r656phlf4/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 
-    <script 
+    <script
         src="//cdn.rawgit.com/plugnburn/f9d3acf33bee8f3f7e2d/raw/50d2148811f8da61d70cdceec83ecbde5e484b83/dabi.min.js"></script>
 
     <script
@@ -111,9 +111,15 @@
     <script type="text/javascript" src="js/outlook.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 
-    <script async defer src="https://apis.google.com/js/api.js" 
-      onload="this.onload=function(){};handleClientLoad()" 
+    <script src="https://accounts.google.com/gsi/client"
+      onload="this.onload=function(){};handleClientLoad()"
       onreadystatechange="if (this.readyState === 'complete') this.onload()">
+    </script>
+
+    <script src="https://apis.google.com/js/api.js"
+            onload="this.onload=function(){};handleApiLoad()"
+            onreadystatechange="if (this.readyState === 'complete') this.onload()">
+
     </script>
 
 </head>
@@ -162,6 +168,13 @@
                     <img class="gmail-logo" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.freeiconspng.com%2Fuploads%2Fgmail-icon-16.png&f=1&nofb=1" />
                     <div id="gmail-result"></div>
                     <button id="authorize-button" style="display: none;">Gmail Sign In</button>
+                    <div id='buttonDiv'></div>
+
+                    <div id="authenticated" style="display:none">
+                        <h4 id="welcome">Hello there!</h4>
+                        <p>The raw token is: <em id="raw-token"></em></p>
+
+                    </div>
 
                     <button id="signout-button" style="display: none;">Sign Out</button>
                     <button id="set-gmail-signature-button" style="display: none;">Set Gmail Signature</button>
