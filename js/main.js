@@ -36,6 +36,7 @@ function fillTemplate()
     filled = filled.replace('{{email_link}}', $('#email').val());
     filled = filled.replace('{{mobile}}', phone2);
     filled = filled.replace('{{mobile_link}}', onlyNumbers(phone2));
+    filled = filled.replace('{{qr}}', $('#qr').val());
 
     return filled;
 }
