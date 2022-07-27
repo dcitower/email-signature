@@ -4,8 +4,6 @@
 // New project
 // https://console.cloud.google.com/apis/credentials?project=diverse-email-sig&supportedpurview=project
 
-const apiKey = 'YOUR_API_KEY';
-
 // Enter the API Discovery Docs that describes the APIs you want to
 // access. In this example, we are accessing the People API, so we load
 // Discovery Doc found here: https://developers.google.com/people/api/rest/
@@ -16,7 +14,7 @@ const discoveryDocs = ["https://people.googleapis.com/$discovery/rest?version=v1
 // In your API Console project, add a JavaScript origin that corresponds
 //   to the domain where you will be running the script.
 
-const clientId = 'YOUR_CLIENT_ID';
+const clientId = '983744597796-1gnrqksbctip4gqhgbcd7p8gik2troqh.apps.googleusercontent.com';
 
 // Enter one or more authorization scopes. Refer to the documentation for
 // the API or https://developers.google.com/people/v1/how-tos/authorizing
@@ -102,9 +100,22 @@ function onSetSignatureClick(event)
         'signature' : signature
     }).then(function(response) {
         $('#gmail-result').html('√ Updated Gmail Signature')
+        console.log(response)
     },
     function(err) {
         $('#gmail-result').html('x Error Updating Signature')
+    });
+
+    // Get the signature
+    gapi.client.gmail.users.settings.sendAs.get({
+        'userId': 'me',
+        'sendAsEmail' : myEmail
+    }).then(function(response) {
+        $('#gmail-result').html('√ Got back Signature')
+        console.log("sendAs Get: ", response)
+    },
+    function(err) {
+        $('#gmail-result').html('x Error getting Signature')
     });
 }
 
