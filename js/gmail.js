@@ -14,7 +14,7 @@ const discoveryDocs = ["https://people.googleapis.com/$discovery/rest?version=v1
 // In your API Console project, add a JavaScript origin that corresponds
 //   to the domain where you will be running the script.
 
-const clientId = 'YOUR_CLIENT_ID';
+const clientId = '658999840558-lpfjs62k5gge4hgsj142q71n0a19j8f0.apps.googleusercontent.com';
 
 // Enter one or more authorization scopes. Refer to the documentation for
 // the API or https://developers.google.com/people/v1/how-tos/authorizing
