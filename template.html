@@ -36,6 +36,7 @@
     .roboto {
         font-family: 'Roboto', Tahoma, Geneva, sans-serif !important;
     }
+    .blue-links-fix{color:black !important;text-decoration:none !important;font-size: 19px !important;}
     @media screen and (max-width:610px) {
         .name{font-size: 16px !important;}
 
@@ -86,38 +87,78 @@
                     <td class="address" style="padding-bottom:2px; border-left:4px solid #6D6E70; padding-left:15px; font-size:20px; white-space:nowrap;  padding-right: 15px;">1625 Riverview Dr, Lewisville, TX 75056</td>
                 </tr>
                 <tr>
-                    <td style="padding-bottom:2px; border-left:4px solid #6D6E70; padding-left:15px;  padding-right: 15px;">
-                        <table style="width:100%;">
-                            <tr class="phone-email roboto" style="font-family:Tahoma, Geneva, sans-serif, 'Roboto';">
-                                <td>
-                                    <span class="phone-heading" style="color:#000000; font-weight:400; display:inline-block; width:42px; text-align:center;">T</span>
-                                </td>
-                                <td>
-                                    <a href="tel:{{phone_link}}" style="color:#000000; text-decoration:none;">{{phone}}</a>
-                                </td>
-                                <td>
-                                    <span class="email-heading" style="color:#000000; font-weight:400; display:inline-block; width:42px; text-align:center;">E</span>
-                                </td>
-                                <td>
-                                    <a href="mailto:{{email_link}}" style="color:#000000;text-decoration:none;">{{email}}</a>
-                                </td>
-                            </tr>
-                            <tr class="cellphone-website roboto" style="font-family:Tahoma, Geneva, sans-serif, 'Roboto';">
-                                <td>
-                                    <span class="cellphone-heading" style="color:#000000; font-weight:400; display:inline-block; width:42px; text-align:center;">M</span>
-                                </td>
-                                <td>
-                                    <a href="tel:{{mobile_link}}" style="color:#000000;text-decoration:none;">{{mobile}}</a>
-                                </td>
-                                <td>
-                                    <span class="website-heading" style="color:#000000; font-weight:400; display:inline-block; width:42px; text-align:center;">W</span>
-                                </td>
-                                <td>
-                                    <a href="https://diverseconstruction.com" style="color:#000000;text-decoration:none;">diverseconstruction.com</a>
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
+                  <td style="padding-bottom:2px;border-left:4px solid #6D6E70; padding-left:15px;  padding-right: 15px;">
+                    <table style="width:100%;">
+                        <tr class="phone-email roboto" style="font-family:Tahoma, Geneva, sans-serif, 'Roboto';">
+                            
+                            <td width="22" align="left">
+                                <span class="phone-heading" style="color:#000000; font-weight:400; display:inline-block; width:22px;font-family:'Lucida Console',Monaco,'Roboto Mono','Andale Mono','SF Mono',Roboto,Tahoma,Geneva,sans-serif !important;">
+                                  <font face="Lucida Console,Monaco,Andale Mono,SF Mono,Roboto Mono,Roboto,Tahoma,Geneva,sans-serif" style="text-decoration: none; font-size: 18px;">T</font>
+                                </span>
+                            </td>
+
+                            <td>
+
+                                <a style="color: #000000; text-decoration: none; font-size: 18px;" href="tel:{{phone_link}}">
+                                  <span style="color: #000000; text-decoration: none; font-size: 18px;">
+                                    <font color="#000000" style="text-decoration: none; font-size: 18px;">{{phone}}</font>
+                                  </span>
+                                </a>
+
+                            </td>
+
+                            <td width="36" align="center">
+                                <span class="email-heading" style="color:#000000; font-weight:400; display:inline-block; width:36px; text-align:center;font-family:'Lucida Console',Monaco,'Roboto Mono','Andale Mono','SF Mono',Roboto,Tahoma,Geneva,sans-serif !important;">
+                                  <font face="Lucida Console,Monaco,Andale Mono,SF Mono,Roboto Mono,Roboto,Tahoma,Geneva,sans-serif" style="text-decoration: none; font-size: 18px;">E</font>
+                                </span>
+                            </td>
+
+                            <td> 
+
+                                <a style="color: #000000; text-decoration: none; font-size: 18px;" href="mailto:{{email_link}}">
+                                  <span style="color: #000000; text-decoration: none; font-size: 18px;">
+                                    <font color="#000000" style="text-decoration: none; font-size: 18px;">{{email}}</font>
+                                  </span>
+                                </a>
+
+                            </td>
+
+                        </tr>
+                        <tr class="cellphone-website roboto" style="font-family:Tahoma, Geneva, sans-serif, 'Roboto';">
+
+                            <td width="22" align="left">
+                                <span class="cellphone-heading" style="color:#000000; font-weight:400; display:inline-block; width:22px;font-family:'Lucida Console',Monaco,'Roboto Mono','Andale Mono','SF Mono',Roboto,Tahoma,Geneva,sans-serif !important;">
+                                  <font face="Lucida Console,Monaco,Andale Mono,SF Mono,Roboto Mono,Roboto,Tahoma,Geneva,sans-serif" style="text-decoration: none; font-size: 18px;">M</font>
+                                </span>
+                            </td>
+
+                            <td>
+
+                                <a style="color: #000000; text-decoration: none; font-size: 18px;" href="tel:{{mobile_link}}">
+                                  <span style="color: #000000; text-decoration: none; font-size: 18px;">
+                                    <font color="#000000" style="text-decoration: none; font-size: 18px;">{{mobile}}</font>
+                                  </span>
+                                </a>
+                            </td>
+
+                            <td width="36" align="center">
+                                <span class="website-heading" style="color:#000000; font-weight:400; display:inline-block; width:36px; text-align:center;font-family:'Lucida Console',Monaco,'Roboto Mono','Andale Mono','SF Mono',Roboto,Tahoma,Geneva,sans-serif !important;">
+                                  <font face="Lucida Console,Monaco,Andale Mono,SF Mono,Roboto Mono,Roboto,Tahoma,Geneva,sans-serif" style="text-decoration: none; font-size: 18px;">W</font>
+                                </span>
+                            </td>
+
+                            <td>
+
+                                <a style="color: #000000; text-decoration: none; font-size: 18px;" href="https://diverseconstruction.com">
+                                  <span style="color: #000000; text-decoration: none; font-size: 18px;">
+                                    <font color="#000000" style="text-decoration: none; font-size: 18px;">diverseconstruction.com</font>
+                                  </span>
+                                </a>
+
+                            </td>
+                        </tr>
+                    </table>
+                  </td>
                 </tr>
                 <tr>
                     <td style="height:15px;"></td>
