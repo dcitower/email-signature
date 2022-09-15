@@ -16,6 +16,7 @@ const discoveryDocs = ["https://people.googleapis.com/$discovery/rest?version=v1
 
 const clientId = 'YOUR_CLIENT_ID';
 
+
 // Enter one or more authorization scopes. Refer to the documentation for
 // the API or https://developers.google.com/people/v1/how-tos/authorizing
 // for details.
