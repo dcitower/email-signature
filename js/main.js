@@ -25,9 +25,10 @@ function fillTemplate()
     let filled = template;
 
     const isInternal = $('#mobile').val() == '';
-    const phone2 = isInternal ? '972.735.0701' : $('#mobile').val();
+    const phone2 = isInternal ? '' : $('#mobile').val();
 
-    filled = filled.replace('{{name}}', $('#name').val());
+    filled = filled.replaceAll('{{fname}}', $('#fname').val());
+    filled = filled.replaceAll('{{lname}}', $('#lname').val());
     filled = filled.replace('{{title}}', $('#title').val());
     filled = filled.replace('{{M}}', isInternal ? 'F' : 'M');
     filled = filled.replace('{{phone}}', $('#phone').val());
