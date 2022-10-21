@@ -1,0 +1,73 @@
+Delivered-To: jake@dcitower.com
+Received: by 2002:a05:6839:7389:0:0:0:0 with SMTP id lv9csp2158397nkc;
+        Tue, 18 Oct 2022 00:09:35 -0700 (PDT)
+X-Received: by 2002:a63:1e0f:0:b0:44b:796c:bc14 with SMTP id e15-20020a631e0f000000b0044b796cbc14mr1434448pge.563.1666076975566;
+        Tue, 18 Oct 2022 00:09:35 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1666076975; cv=none;
+        d=google.com; s=arc-20160816;
+        b=HoJxX8Xyrh6c6I6FmHAT/1yEEwKPblX2FEVRoMTKCY8gZea3icypX3kNawFmCxiiqA
+         7YkEhW+em7h/dCIwsjjgsm0TDjb829gCMEiElD1qF5ISBeE2MCb8dT5XdpFgxu1qBvS2
+         +diKoNzlB1DTDgHCZ6vPIwq/DJIE5TcGCG5ArdHWfWs2TL/hoJrZmY6rrvmEL9X5B2aE
+         cfg0ZLm8AlUtr2aK/9hlEzX5EZrl00lC+3XZkgGreRDln7qnhnbGK+DlOYBWvFQVnGqs
+         Ov4fNtZBI9760QMGq5HNZ5U7hz96jPT2LvO8RT+6e1JEpBc9YK5G9h3ht2I+oCoXoZYe
+         H8Zg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=yuclwju/Z04QTBGpNn23T1yJmGcCE5gmSReiHarCbXo=;
+        b=VUCcxcsVwl3ZWvj80Lb6FM2Yopey6fj+XE9MXBhDz3bOL6+xJf8iem2+19sN10Rton
+         X91H5e7PZT8oRg/VPkaLktoqJ1JCpdTHGq5Fy7JwYodhp7dUxBnHSuleNkOvGEjyX6FY
+         Ta6GGaamtOF7qMt5HtiYz5vpUWB/9Jri5XyGBi3m1bcQjnWHSVYsIrD5hVmI5ckjQ5VC
+         UuaKNyEDhjmCtsfxo7nhk5zLhrj0Lrz0KKWsGJ6kh3lJ7CExpohx+fwJy26Sy2u/SEes
+         rBFy6Bi4oMk+za3H5itz16Fs076iXAG/VbGp7KzD8vHGOov00Z/uN6guNEYQfsbXBEYZ
+         umQQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20210112 header.b=V2jpB0ce;
+       spf=pass (google.com: domain of codeablewow@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=codeablewow@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <codeablewow@gmail.com>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id a5-20020a63d405000000b00460fbd14bedsor5201333pgh.9.2022.10.18.00.09.35
+        for <jake@dcitower.com>
+        (Google Transport Security);
+        Tue, 18 Oct 2022 00:09:35 -0700 (PDT)
+Received-SPF: pass (google.com: domain of codeablewow@gmail.com designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20210112 header.b=V2jpB0ce;
+       spf=pass (google.com: domain of codeablewow@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=codeablewow@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20210112;
+        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=yuclwju/Z04QTBGpNn23T1yJmGcCE5gmSReiHarCbXo=;
+        b=V2jpB0cekjPZyJkGkO3YiDSTxTG7Ksj1oBzVCwdW1ykTkQLYiQ9E8FVixVaHutXeOS
+         /nM21F2TpGhXaPOiMZv3un91NMvz8OWFM9ckBlH4AZiJu59LyhYUH2Mtc/awH6s03FjO
+         kKNo3m7NMnfoF1EkiAy9M8EDfXlhKqKbNLBWO3aVb4ZcYloLsPcrgp4DPu39z6VYMBkh
+         UFzzFAaXUMz4Z6V3SMqVgjf1q9XTU6QqO67MjCBQqL11IUZ8gavD0k+xCjBYUCf7HlKy
+         XzjNWBIZaOASYpR7DWlIT9Z/9MZkjkkN1hSgb+rVln5rCCKpnZs4gEgiQyqcD3C9qb00
+         AvFg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20210112;
+        h=to:subject:message-id:date:from:mime-version:x-gm-message-state
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=yuclwju/Z04QTBGpNn23T1yJmGcCE5gmSReiHarCbXo=;
+        b=yYKzGIvUytj5h7o1yU7YoHei5ZKzeOhX9uUB2y5dfIJk1Ix3iAenKXFymx9e/7o6iL
+         S/SR5wevEbS3+cUh33DZFzO8mlFDnoiszSuqx6PJLHrs1jnU/WafLW35uzxE+t+Jy6xa
+         s3tIEgT3AtHSABWGDYwm02uRIPMpu3B9oqpZeZUeU1kVspaeMjlEvugm/lXs7sotkVoK
+         P/kgK2xTJ4weMi1JNHddgBrVq6pckwQ8twNJkEGJFcfBcPIA27FvAc0AdbUOVuuhoAOS
+         QKu+B2Gh5QyAKK9ViYZwz3rQ0Qmg4+0f6ihpF7TuFrRop/gwaEFRLjF6FOnEm8LvD+Ol
+         gHPw==
+X-Gm-Message-State: ACrzQf0MVcOhnSiEhKfqwFVn+q/Y5+EhYUs7lYd6uUqPiLr5XyBPb2kv
+	iGTDeewtov7RXMB3taW9HUs/JLYcDwkVyYMS/v0=
+X-Google-Smtp-Source: AMsMyM76PMxZLtf5s7pMcXjnE32GbeLD6w7GT4bGdKvZrg8D/dGLe1uFU0qLmCv/D4c/hE1UB/aJ6WJah4T32PR9MXY=
+X-Received: by 2002:a63:85c8:0:b0:460:8e46:41c7 with SMTP id
+ u191-20020a6385c8000000b004608e4641c7mr1501551pgd.285.1666076975105; Tue, 18
+ Oct 2022 00:09:35 -0700 (PDT)
+MIME-Version: 1.0
+From: Codeable WOW <codeablewow@gmail.com>
+Date: Tue, 18 Oct 2022 12:09:23 +0500
+Message-ID: <CAO6s0e1Zi6tgp9_USvMLqqa5=N+HdbkcPkJW-y4cf=VCqnSmQw@mail.gmail.com>
+Subject: diverse :: GMail > Litmus :: no Outlook hacks - v2
+To: dcitower.7dc6@litmusemail.com, jake@dcitower.com, jakechapa@gmail.com
+Content-Type: multipart/alternative; boundary="000000000000451cdc05eb49c6ed"
+

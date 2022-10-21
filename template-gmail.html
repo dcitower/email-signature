@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="x-apple-disable-message-reformatting">
+<!-- template-gmail.html -->
+<!--[if !mso]><!-->
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<!--<![endif]-->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+<title></title>
+
+<!--[if mso]>
+<style type="text/css">
+table {border-collapse:collapse;border:0;border-spacing:0;margin:0;}
+div, td, p {padding:0;}
+div {margin:0 !important;}
+mso-generic-font-family: swiss;
+mso-font-alt: 'Tahoma';
+</style>
+<noscript>
+<xml>
+<o:OfficeDocumentSettings>
+<o:PixelsPerInch>96</o:PixelsPerInch>
+</o:OfficeDocumentSettings>
+</xml>
+</noscript>
+<![endif]-->
+
+<style>
+/* latin */
+@font-face {
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-display: swap;
+src: local('Roboto'), url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxK.woff2) format('woff2');
+unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fChc4EsA.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+font-family: 'Roboto Mono';
+font-style: normal;
+font-weight: 400;
+font-display: swap;
+src: url(https://fonts.gstatic.com/s/robotomono/v22/L0xuDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vq_ROW4.woff2) format('woff2');
+}
+.roboto {
+font-family:'Roboto',Tahoma,Geneva,sans-serif !important;
+}
+
+/* 
+> wow
+the blue links fix is for when Outlook adds blue color to the links and underlines them 
+*/
+.blue-links-fix{color:black !important;text-decoration:none !important;font-size: 19px !important;}
+</style>
+</head>
+
+<body>
+
+<!--[if gte mso 9|IE]>
+<style type="text/css">
+@font-face {
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-display: swap;
+src: local('Roboto'), url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxK.woff2) format('woff2');
+mso-generic-font-family: swiss;
+mso-font-alt: 'Tahoma';
+}
+@font-face {
+font-family: 'Roboto Mono';
+font-style: normal;
+font-weight: 400;
+font-display: swap;
+src: local('Roboto Mono'), local('Roboto-Mono'), url(https://fonts.gstatic.com/s/robotomono/v22/L0xuDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vq_ROW4.woff2) format('woff2');
+mso-generic-font-family: swiss;
+mso-font-alt: 'Consolas';
+}
+.roboto { font-family: 'Roboto',Geneva,sans-serif !important; }
+a {mso-line-height-rule:exactly;line-height:14px;}
+div, td, p {padding:0;}
+.ExternalClass * {line-height:  120%;}
+.twopxtop {padding-top: 2px;}
+</style>
+<![endif]-->
+
+<div>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+@font-face {
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-display: swap;
+src: local('Monaco'), url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxK.woff2) format('woff2');
+}
+@font-face {
+font-family: 'Roboto Mono';
+font-style: normal;
+font-weight: 400;
+font-display: swap;
+src: url(https://fonts.gstatic.com/s/robotomono/v22/L0xuDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vq_ROW4.woff2) format('woff2');
+}
+.roboto {
+font-family:'Roboto',Tahoma,Geneva,sans-serif !important;
+}
+.blue-links-fix{color:black !important;text-decoration:none !important;font-size: 19px !important;}
+</style>
+
+<table cellpadding="0" cellspacing="0" width="400" style="border-collapse:collapse;width:400px;margin:0;padding:0;" class="module mobile-logo" table-view="mobile" data-type="code" role="module">
+<tbody>
+<tr>
+
+<!-- 
+> wow
+* the setting of 'height=' gives some control over the spacing
+
+* setting 'margin' and 'padding' to '0' preemptively helps with some clients adding spacing on 
+their own
+
+* the setting of 'valign' to 'bottom' was done when trying to make the logo as close as possible
+to the text below -- this should be set to top in a future revision (search vlign-explanation)
+-->
+<td height="28" width="170" style="margin: 0;vertical-align:top; padding-left:0px; padding-right:15px; padding-bottom:0;width:170px;" align="left" valign="bottom">
+	<img alt="diverse logo" class="no-lazy" src="https://diverseconstruction.com/img-sig/logo-mobile-2.jpg?v=1" style="margin:0;border:0;width:154px;height:26px;padding-bottom:4px;" width="154" height="26" >
+</td>
+
+<!-- 
+> wow
+* the 'valign' to top here is necessary, the qr already has a thin white border, so we want it 
+to stick to top
+-->
+<td rowspan="2" valign="top" width="126" style="width: 126px;vertical-align:top; padding:0;" align="left">
+	<table cellpadding="0" cellspacing="0" style="width:100%;">
+	<tbody>
+		<tr valign="top">
+			<td height="88" valign="top" align="center" style="padding:0;margin:0;">
+				<img class="qr-img" alt="" class="no-lazy" src="https://diverseconstruction.com/team/qr-codes/VCF_-_{{fname}}_{{lname}}.png" width="88" height="88" style="max-width:88px;margin:0;border:0;">
+			</td>
+		</tr>
+
+<!-- 
+> wow
+* the 'font' tag here is needed to counter Outlook turning links to blue otherwise
+-->
+		<tr height="20" valign="middle" class="roboto">
+			<td align="center" style="text-decoration: none; font-size: 9px;padding: 0;">
+				<span style="color: #000000; text-decoration: none; font-size: 9px;font-family:'Roboto',Tahoma,Geneva,sans-serif;">
+					<em>Scan My VCard</em>
+				</span>
+			</td>
+		</tr>
+	</tbody>
+	</table>
+</td>
+
+</tr>
+
+<tr>
+	<td valign="top">
+
+<!--
+> wow
+* the 'cellpadding' and 'cellspacing' setting to '0' gave us more control over the spacing and 
+padding between lines, elements
+
+* setting 'font-size' in a 'table' or 'td' appears to have an effect on spacing between lines
+
+* 'line-height' to '1' - hoping to reset the line-height on the 'table'
+
+* 'border-collapse' to remove 1px of spacing, and later add our own spacing as we like
+-->
+		<table cellpadding="0" cellspacing="0" class="roboto" style="border-collapse:collapse; font-family:'Roboto',Tahoma,Geneva,sans-serif; color:#000000; font-size:9px; font-weight:300;width:100%;line-height:1;">
+			<tbody>
+				<tr>
+
+				<!-- 
+				> wow
+				* search 'mso-rule-explanation' in this file for details
+
+				* the 'mso' rule is the only way to control line spacing in Outlook
+				-->
+					<td class="roboto" style="line-height:16px;border-left:4px solid #6D6E70; font-size:12px;padding-left:10px;padding-right: 15px;padding-top:0;padding-bottom:1px;font-family:'Roboto',Geneva,Tahoma,sans-serif;">
+						<span class="name" style="font-weight:500;">{{fname}} {{lname}}</span> <span class="divider" style="font-size:14px;">|</span>
+						<span class="title" style="font-weight:400;">{{title}}</span>
+					</td>
+				</tr>
+
+				<tr>
+				<!-- 
+				> wow
+				* search 'mso-rule-explanation' in this file for details
+
+				* the 'mso' rule is the only way to control line spacing in Outlook
+				-->
+					<td class="roboto" class="address" style="padding-bottom: 1px;border-left:4px solid #6D6E70; padding-left:10px; font-size:10px; white-space:nowrap; padding-right:11px;line-height:14px;font-family:'Roboto',Geneva,Tahoma,sans-serif;">
+							1625 Riverview Dr, Lewisville, TX 75056
+					</td>
+				</tr>
+
+				<tr>
+					<td style="padding-bottom:0;border-left:4px solid #6D6E70; padding-left:11px; padding-right: 11px;line-height:9px;">
+						<table style="width:100%;" cellpadding="0" cellspacing="0">
+							<tr class="phone-email">
+
+							<!-- 
+							> wow
+							* search 'mso-rule-explanation' in this file for details
+
+							* the 'mso' rule is the only way to control line spacing in Outlook
+
+							* we set font-sizes in 'pt', 'font-family' as very basic fonts that every Windows must have
+
+							* the 'width=15' and 'align=left' on the 'td' for 'T' essential to keep 'T' aligned with address 
+							above and LinkedIn icon below
+							-->
+							<td width="15" height="13" align="left" style="font-size:8.0pt;margin:0;padding:0;line-height:9px;font-family:Monaco,'Lucida Sans Typewriter','Lucida Console',Consolas,'Roboto Mono',sans-serif;">
+
+							<!--
+							> wow
+							* the '12.0pt' was set after trial and error
+							-->
+
+							<!--
+							> wow
+							all the CSS rules in such a line - so here we have these rules in case we want to use custom 
+							fonts
+							-->
+							<span class="phone-heading" style="color:#000000; font-weight:400; display:inline-block;text-align:center;font-size:9px;line-height:110%;line-height:12px;font-family:Monaco,'Lucida Sans Typewriter','Lucida Console',Consolas,'Roboto Mono',sans-serif;">
+									T
+							</span>
+							</td>
+
+							<!--
+							> wow
+							* the 'height=13' set for 'td' helps with spacing on all the email clients other than Outlook
+							-->
+							<td style="line-height:9px;font-size:8.0pt;margin:0;padding:0;font-family:Tahoma,Geneva,sans-serif;" height="13">
+								<a style="color: #000000; text-decoration: none; font-size: 9px;padding-bottom:1px;" href="tel:4694223368">
+									<span style="color:#000000; font-weight:400; display:inline-block;text-align:center;font-size:9px;line-height:110%;line-height:12px;font-family:Tahoma,Geneva,sans-serif;">
+										<font color="#000000" style="text-decoration: none; font-size: 9px;">{{phone}}</font>
+									</span>
+								</a>
+							</td>
+
+							<td height="13" width="20" align="center" style="font-size:8.0pt;margin:0;padding:0;line-height:9px;font-family:Monaco,'Lucida Sans Typewriter','Lucida Console',Consolas,'Roboto Mono',sans-serif;">
+	
+								<span class="email-heading" style="color:#000000; font-weight:400; display:inline-block; width:20px; text-align:center;font-size:9px;line-height:110%;line-height:12px;font-family:Monaco,'Lucida Sans Typewriter','Lucida Console',Consolas,'Roboto Mono',sans-serif;">
+										E
+								</span>
+
+							</td>
+
+							<td height="13" style="font-size:8.0pt;margin:0;padding:0;font-family:Tahoma,Geneva,sans-serif;line-height:9px;"> 
+
+								<a style="color: #000000; text-decoration: none; font-size: 9px;" href="mailto:michelle@dcitower.com">
+									<span style="color:#000000; font-weight:400; display:inline-block; text-align:center;font-size:9px;line-height:110%;line-height:12px;font-family:Tahoma,Geneva,sans-serif;">
+										<font color="#000000" style="text-decoration: none; font-size: 9px;">{{email}}</font>
+									</span>
+								</a>
+
+							</td>
+
+							</tr>
+							<tr class="cellphone-website">
+
+							<!-- 
+							> wow
+							* the 'width=15' and 'align=left' on the 'td' for 'M' essential to keep 'M' aligned with address 
+							above and LinkedIn icon below
+							-->
+							<td height="13" width="15" align="left" style="font-size:8.0pt;margin:0;padding:0;line-height:9px;font-family:Monaco,'Lucida Sans Typewriter','Lucida Console',Consolas,'Roboto Mono',sans-serif;">
+
+								<span class="cellphone-heading" style="color:#000000; font-weight:400; display:inline-block;text-align:center;font-size:9px;line-height:110%;line-height:12px;font-family:Monaco,'Lucida Sans Typewriter','Lucida Console',Consolas,'Roboto Mono',sans-serif;">
+										M
+								</span>
+
+							</td>
+
+							<td height="13" style="font-size:8.0pt;margin:0;padding:0;font-family:Tahoma,Geneva,sans-serif;line-height:9px;">
+
+								<a style="color: #000000; text-decoration: none; font-size: 9px;" href="tel:9727350500">
+									<span style="color:#000000; font-weight:400; display:inline-block;text-align:center;font-size:9px;line-height:110%;line-height:12px;font-family:Tahoma,Geneva,sans-serif;">
+									<font color="#000000" style="text-decoration: none; font-size: 9px;">{{mobile}}</font>
+									</span>
+								</a>
+
+							</td>
+
+							<td height="13" width="20" align="center" style="font-size:8.0pt;margin:0;padding:0;line-height:9px;font-family:Monaco,'Lucida Sans Typewriter','Lucida Console',Consolas,'Roboto Mono',sans-serif;">
+
+								<span class="website-heading" style="color:#000000; font-weight:400; display:inline-block; width:20px; text-align:center;font-size:9px;line-height:110%;line-height:12px;font-family:Monaco,'Lucida Sans Typewriter','Lucida Console',Consolas,'Roboto Mono',sans-serif;">
+										W
+								</span>
+
+							</td>
+
+							<td height="13" style="font-size:8.0pt;margin:0;padding:0;font-family:Tahoma,Geneva,sans-serif;line-height:9px;">
+
+								<a style="color: #000000; text-decoration: none; font-size: 9px;" href="https://diverseconstruction.com">
+									<span style="color:#000000; font-weight:400; display:inline-block;text-align:center;font-size:9px;line-height:110%;line-height:12px;font-family:Tahoma,Geneva,sans-serif;">
+									<font color="#000000" style="text-decoration: none; font-size: 9px;">diverseconstruction.com</font>
+									</span>
+								</a>
+
+							</td>
+
+							</tr>
+						</table>
+
+				</td>
+				</tr>
+				<tr>
+
+				<!-- 
+				> wow 
+				* the 'twopxtop' seems to not work for Outlook - can be removed in future revision
+
+				* the 'padding-top:3px' is needed to have some space beteeen social icons and lines above
+				-->
+				<td class="twopxtop" valign="bottom" height="14" style="border-left:4px solid #6D6E70;font-size:0;background-color:#ffffff;padding:0;margin:0;padding-top:3px;">
+
+					<table width="248" height="14" cellspacing="0" cellpadding="0" style="border-collapse:collapse;padding:0;margin:0;display: inline-block;">
+						<tbody>
+							<tr class="phone-email roboto" style="font-family:Tahoma,Geneva,sans-serif;">
+
+							<!--
+							> wow
+							* these social icons cannot simply be replaced with new ones; a lot of calculation is done to 
+							make them work for dark theme email clients - see the images to get an understanding 
+							-->
+							<td align="left" valign="bottom" width="61" height="14" style="background-color:#ffffff;padding-right:0;padding-left:9px;margin:0;">
+
+								<a href="http://bit.ly/dcilikn" target="_blank" style="cursor: pointer;">
+								<img class="no-lazy" src="https://diverseconstruction.com/img-sig/li-v4.png" width="61" height="14" style="max-width:61px;padding:0; margin:0;cursor:pointer;">
+								</a>
+
+							</td>
+
+							<td align="left" valign="bottom" width="61" height="14" style="background-color:#ffffff;padding:0;margin:0;">
+
+								<a href="http://bit.ly/dcifbook" target="_blank" style="cursor: pointer;">
+								<img class="no-lazy" src="https://diverseconstruction.com/img-sig/fb-v4.png" width="61" height="14" style="max-width:61px;padding:0; margin:0;cursor:pointer;">
+								</a>
+
+							</td>
+
+							<td align="left" valign="bottom" width="61" height="14" style="background-color:#ffffff;padding:0;margin:0;">
+
+								<a href="http://bit.ly/dciinst" target="_blank" style="cursor: pointer;">
+								<img class="no-lazy" src="https://diverseconstruction.com/img-sig/ig-v6.png" width="61" height="14" style="max-width:61px;padding:0; margin:0;cursor:pointer;">
+								</a>
+
+							</td>
+
+							<td align="left" valign="bottom" width="61" height="14" style="background-color:#ffffff;padding:0;margin:0;">
+
+								<a href="http://bit.ly/dcitw" target="_blank" style="cursor: pointer;">
+								<img class="no-lazy" src="https://diverseconstruction.com/img-sig/tw-v4.png" width="61" height="14" style="max-width:61px;padding:0; margin:0;cursor:pointer;">
+								</a>
+
+							</td>
+
+							</tr>
+						</tbody>
+
+					</table>
+
+				</td>
+				</tr>
+			</tbody>
+		</table>
+</td>
+
+</tr>
+</tbody>
+</table>
+
+</div>
+</body>
+</html>
