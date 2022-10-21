@@ -1,6 +1,6 @@
 $(function() {
     $('#download-button').click(function() {
-        download("signature.html", fillTemplate());
+        download("signature.html", fillTemplateOutlook());
     })
 })
 
