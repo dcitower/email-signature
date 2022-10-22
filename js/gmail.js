@@ -93,7 +93,7 @@ function onSignoutClick(event) {
 
 function onSetSignatureClick(event)
 {
-    const signature = $('#code-textarea').val()
+    const signature = $('#code-textarea-gmail').val()
 
     gapi.client.gmail.users.settings.sendAs.patch({
         'userId': 'me',
